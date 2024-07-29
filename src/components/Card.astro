@@ -1,13 +1,12 @@
 ---
-// Define any props for your Card component if needed
-const { title, content, imageUrl } = Astro.props;
+const { imageSrc, title, description } = Astro.props;
 ---
 
 <div class="card">
-  <img src={imageUrl} alt={title} class="card-image" />
+  <img src={imageSrc} alt={title} class="card-image" />
   <div class="card-content">
-    <h3 class="card-title">{title}</h3>
-    <p class="card-text">{content}</p>
+    <h2 class="card-title">{title}</h2>
+    <p class="card-description">{description}</p>
   </div>
 </div>
 
@@ -16,7 +15,12 @@ const { title, content, imageUrl } = Astro.props;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 300px; /* Adjust based on your design */
   }
 
   .card-image {
@@ -29,11 +33,12 @@ const { title, content, imageUrl } = Astro.props;
   }
 
   .card-title {
-    margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 8px;
   }
 
-  .card-text {
-    margin: 0.5rem 0 0;
+  .card-description {
+    font-size: 1rem;
+    color: #555;
   }
 </style>
