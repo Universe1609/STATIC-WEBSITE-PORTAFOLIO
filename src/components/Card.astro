@@ -1,0 +1,44 @@
+---
+const { imageSrc, title, description } = Astro.props;
+---
+
+<div class="card">
+  <img src={imageSrc} alt={title} class="card-image" />
+  <div class="card-content">
+    <h2 class="card-title">{title}</h2>
+    <p class="card-description">{description}</p>
+  </div>
+</div>
+
+<style>
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 300px; /* Adjust based on your design */
+  }
+
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-content {
+    padding: 16px;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+
+  .card-description {
+    font-size: 1rem;
+    color: #555;
+  }
+</style>

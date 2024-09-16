@@ -1,0 +1,128 @@
+---
+
+console.log("Header");
+
+---
+
+<header class="container mt-sm-5 mt-4 mb-4 mt-xs-1">
+    <div class="row">
+        
+        <div class="col-sm-4 col-12 text-sm-right text-center pt-sm-4">
+            <a href="./" class="text-decoration-none">
+                <img id="home-image" class="rounded-circle" src="/pictures/avatar_test.jpg">
+            </a>
+        </div>
+        <div class="col-sm-8 col-12 text-sm-left text-center">
+        
+            <h2 class="m-0 mb-2 mt-4">
+                <a href="./" class="text-decoration-none">
+                    
+                        NName Universe
+                    
+                </a>
+            </h2>
+            <p class="text-muted mb-1">
+                
+                    DevOps &amp; DevSecOps | AWS | APEX Duo
+                
+            </p>
+            <ul id="nav-links" class="list-inline mb-2">
+                
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white pages" href="./" title="About">About</a>
+                    </li>
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white pages" href="/projects" title="Posts">Projects</a>
+                    </li>
+                
+                
+            </ul>
+            <ul id="nav-social" class="list-inline">
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="https://github.com/BlackPavvn" target="_blank">
+                            <i class="fab fa-github fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="https://www.linkedin.com/in/edmundo-manuel-miranda-bailón-7b6b1725a/" target="_blank">
+                            <i class="fab fa-linkedin-in fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="mailto:miranda.epeti@gmail.com" target="_blank">
+                            <i class="fas fa-at fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+    <hr>
+</header>
+
+<style>
+    #home-image {
+        width: 120px;
+        height: 120px;
+        border: solid 5px #fff;
+        box-shadow: 0 10px 7px -10px rgba(0, 0, 0, .6);
+        border-radius: .2rem;
+        padding: 0;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .rounded-circle {
+        border-radius: 50% !important;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+        border-radius: .2rem;
+    }
+
+    header h2 a, header h2 a:hover {
+        color: #212529;
+    }
+
+    #nav-links {
+        position: relative;
+        left: -5px;
+    }
+
+    .badge {
+        display: inline-block;
+        padding: .25em .4em;
+        font-size: 75%;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: .25rem;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+
+    #nav-social {
+        position: relative;
+        left: 1px;
+    }
+
+    .pages {
+        color: #0d6efd !important;
+    }
+
+    .pages:hover {
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        text-decoration: none;
+        color: #0954a3 !important;
+    }
+
+</style>
