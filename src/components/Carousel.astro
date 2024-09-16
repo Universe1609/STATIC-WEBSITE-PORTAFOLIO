@@ -1,0 +1,271 @@
+---
+console.log("Carrusel")
+---
+
+<section class="project-section">
+    <div>
+        <div class="card">
+            <div class="item active" style="background-image: url('/pictures/project_1.jpg');">
+                <div class="item-desc">
+                  <h3>Título 1</h3>
+                </div>
+            </div>
+            <div class="card-description">
+                <p>Descripción del primer proyecto</p>
+                <ul>
+                    <li>Tecnología 1</li>
+                    <li>Tecnología 2</li>
+                    <li>Tecnología 3</li>
+                </ul>
+                <p>Puedes revisar el despliegue <a href="">Aquí</a></p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="item active" style="background-image: url('/pictures/project_2.jpg');">
+                <div class="item-desc">
+                <h3>Título 2</h3>
+                </div>
+            </div>
+            <div class="card-description">
+                <p>Descripción del segundo proyecto</p>
+                <ul>
+                    <li>Tecnología 1</li>
+                    <li>Tecnología 2</li>
+                    <li>Tecnología 3</li>
+                </ul>
+                <p>Puedes revisar el despliegue <a href="">Aquí</a></p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="item active" style="background-image: url('/pictures/project_3.jpg');">
+                <div class="item-desc">
+                <h3>Título 3</h3>
+                </div>
+            </div>
+            <div class="card-description">
+                <p>Descripción del tercer proyecto</p>
+                <ul>
+                    <li>Tecnología 1</li>
+                    <li>Tecnología 2</li>
+                    <li>Tecnología 3</li>
+                </ul>
+                <p>Puedes revisar el despliegue <a href="">Aquí</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+<script is:inline src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+      $(document).ready(function() {
+        // Using event delegation to handle click events
+        $('body').on('click', '.item', function() {
+          $(this).siblings('.card-description').toggle(); 
+        });
+      });
+    });
+
+</script>
+<style>
+    .card {
+        padding: 20px;
+        border-radius: 10px;
+        margin: 30px 0px;
+    }
+
+    .card-description {
+        display: none; 
+        margin-top: 20px;
+        color: #333;
+        padding: 10px;
+    }
+
+    .project-section {
+        padding: 10px 50px;
+    }
+
+    .project-section .item {
+
+        width: 320px;
+        height: 400px;
+        display: flex;
+        display: -webkit-flex;
+        align-items: flex-end;
+        -webkit-align-items: flex-end;
+        background: #343434 no-repeat center center / cover;
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+        transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        cursor: pointer;
+    }
+
+    .project-section .item.active {
+        width: 100%;
+        box-shadow: 12px 20px 20px rgba(0, 0, 0, 0.25);
+        -webkit-box-shadow: 12px 20px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .project-section .item:after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.288));
+    }
+
+    .project-section .item-desc {
+        padding: 0 24px 12px;
+        color: #fff;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        transform: translateY(calc(100% - 54px));
+        -webkit-transform: translateY(calc(100% - 54px));
+        transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+    }
+
+    .project-section .item.active .item-desc {
+        transform: none;
+        -webkit-transform: none;
+    }
+
+    .project-section .item-desc p {
+        opacity: 0;
+        -webkit-transform: translateY(32px);
+        transform: translateY(32px);
+        transition: all 0.4s ease-in-out 0.2s;
+        -webkit-transition: all 0.4s ease-in-out 0.2s;
+    }
+
+    .project-section .item.active .item-desc p {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    .project-section .owl-theme.custom-carousel .owl-dots {
+
+        position: relative;
+        z-index: 5;
+    }
+    /******** Middle section CSS End *******/
+
+    /***** responsive css Start ******/
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+        h2 {
+            margin-bottom: 32px;
+        }
+
+        h3 {
+            margin: 0 0 8px;
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        /* -------- Landing page ------- */
+        .project-section {
+            padding: 10px 30px;
+        }
+
+        .project-section .item {
+
+            width: 260px;
+            height: 360px;
+        }
+
+        .project-section .item.active {
+            width: 100%;
+        }
+
+        .project-section .item-desc {
+            transform: translateY(calc(100% - 46px));
+            -webkit-transform: translateY(calc(100% - 46px));
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        h2 {
+            margin-bottom: 32px;
+        }
+
+        h3 {
+            margin: 0 0 8px;
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        .line-title {
+            width: 330px;
+        }
+
+        /* -------- Landing page ------- */
+        .project-section {
+            padding: 10px 30px 40px;
+        }
+
+        .project-section .item {
+
+            width: 240px;
+            height: 330px;
+        }
+
+        .project-section .item.active {
+            width: 100%;
+        }
+
+        .project-section .item-desc {
+            transform: translateY(calc(100% - 42px));
+            -webkit-transform: translateY(calc(100% - 42px));
+        }
+    }
+
+    @media (max-width: 767px) {
+        body {
+            font-size: 14px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            margin: 0 0 8px;
+            font-size: 19px;
+            line-height: 24px;
+        }
+
+        .line-title {
+            width: 250px;
+        }
+
+        /* -------- Landing page ------- */
+        .project-section {
+            padding: 10px 15px 20px;
+        }
+
+        .project-section .item {
+
+            width: 200px;
+            height: 280px;
+        }
+
+        .project-section .item.active {
+            width: 100%;
+            box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+            -webkit-box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        .project-section .item-desc {
+            padding: 0 14px 5px;
+            transform: translateY(calc(100% - 42px));
+            -webkit-transform: translateY(calc(100% - 42px));
+        }
+    }
+</style>
