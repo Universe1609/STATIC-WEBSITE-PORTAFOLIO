@@ -78,12 +78,17 @@ const { title } = Astro.props;
 		display: flex;
 		justify-content: space-between;
 		margin-top: 15px;
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         font-weight: 700;
 	}
 
 	.experience {
 		display: inline;
+	}
+
+	.date {
+		color: gray;
+		text-align: right;
 	}
 
 	#content {
@@ -100,6 +105,10 @@ const { title } = Astro.props;
 		.col-sm-8 {
 			flex: 0 0 66.66666667%;
 			max-width: 66.66666667%;
+		}
+
+		.job {
+			font-size: 1.4rem;
 		}
 	}
 
