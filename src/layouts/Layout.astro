@@ -56,8 +56,34 @@ const { title } = Astro.props;
 		font-size: 1.6625rem;
 	}
 
+	ul {
+		list-style-type: square;
+	}
+
+	li {
+		padding: 5px;
+	}
+
+	li span {
+		display: inline-flex;
+		justify-content: center;
+		width: 22px
+	}
+
 	.mr-3, .mx-3 {
 		margin-right: 1rem !important;
+	}
+
+	.job {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 15px;
+        font-size: 1.4rem;
+        font-weight: 700;
+	}
+
+	.experience {
+		display: inline;
 	}
 
 	#content {
