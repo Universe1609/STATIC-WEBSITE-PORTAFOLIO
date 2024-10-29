@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const props = Astro.props
 ---
 
 <Layout title="Profile">
@@ -52,6 +53,7 @@ import Layout from '../layouts/Layout.astro';
 			<h2>Certificaciones</h2>
 
 			<ul>
+				<li><svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 24 24" {...props}><path fill="#a600ff" d="M21 5.4v6.4L15.4 15V8.7zm-6.2 3.3V15l-5.6-3.2V5.4zm0 7v6.4l-5.6-3.2v-6.4zM8.6 5.1v6.4L3 8.3V1.9z"/></svg> Terraform </li>
 				<li> <span><i class="fa-brands fa-github" style="color: #3f485a;"></i></span> GitHub Actions </li>
 				<li> <span><i class="fa-brands fa-github" style="color: #3f485a;"></i></span> GitHub Foundations </li>
 				<li> <span><i class="fa-brands fa-microsoft" style="color: #008ad7;"></i></span> Azure Fundamentals</li>
